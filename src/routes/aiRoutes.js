@@ -1,5 +1,5 @@
 const express = require("express");
-import { taoNoiDungAI } from "../controllers/ChatGPT/geminiAIController";
+const {  taoNoiDungAI } = require("../controllers/ChatGPT/geminiAIController");
 
 const router = express.Router();
 
