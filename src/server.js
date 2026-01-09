@@ -44,15 +44,9 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) { // Dùng includes thay cho indexOf
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true,    
-    methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],  // Cho phép phương thức OPTIONS (preflight)
+    origin: true, // Cho phép tất cả các nguồn truy cập (rất hữu ích khi deploy test)
+    credentials: true,
+    methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'upload-type'],
 }));
 app.options('*', cors()); // Enable preflight requests for all routes
@@ -128,11 +122,6 @@ cron.schedule('*/10 * * * * *', async () => {
 setInterval(cleanUploads, 1 * 60 * 1000);
 
 
-app.get('/dokhactu', (req, res) => {
-    setTimeout(function() {
-        throw new Error('loi')
-    })
-})
 
 app.listen(port, () => {
     console.log("backend nodejs is running on the port:", port, `\n http://localhost:${port}`);
