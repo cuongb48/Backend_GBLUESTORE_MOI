@@ -39,6 +39,8 @@ const allowedOrigins = [
     'http://localhost:3008', // Local development
     'http://localhost:3009', // Local development
     'http://localhost:3059', // Local development 
+    'https://trang-chu-gbluestore.vercel.app',
+    'https://trang-admin-gbluestore.vercel.app'
 ];
 
 app.use(cors({
