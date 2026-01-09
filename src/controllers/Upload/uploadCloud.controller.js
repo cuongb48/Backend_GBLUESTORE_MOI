@@ -2,7 +2,6 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 const xlsx = require("xlsx");
-const { uploadExcel } = require("./upload.controller");
 const { log } = require("console");
 const cloudinary = require("cloudinary").v2;
 require("dotenv").config();
@@ -174,30 +173,7 @@ const uploadExcel1 = multer({
     },
 }).single("file");
 
-const uploadExcelFile1 = (req, res) => {
-    uploadExcel(req, res, (err) => {
-        if (err) return res.status(400).json({ message: err.message });
 
-        const filePath = path.join(__dirname, "../../public/excel/", req.file.filename);
-        try {
-            const workbook = xlsx.readFile(filePath);
-            const sheetName = workbook.SheetNames[0];
-            const worksheet = workbook.Sheets[sheetName];
-            const data = xlsx.utils.sheet_to_json(worksheet);
-
-            res.status(200).json({
-                success: true,
-                message: "upload file excel thành công",
-                data,
-            });
-        } catch (error) {
-            res.status(500).json({
-                message: "Có lỗi khi xử lý file Excel",
-                error: error.message,
-            });
-        }
-    });
-};
 
 
 
@@ -205,7 +181,6 @@ module.exports = {
     uploadFile1,
     uploadFiles1,
     uploadExcel1,
-    uploadExcelFile1,
     deleteFile1,
     uploadFileMutiple1,
 };
