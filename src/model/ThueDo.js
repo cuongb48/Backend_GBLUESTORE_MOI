@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ThueGame_Schema = new mongoose.Schema({   
+const ThueDo_Schema = new mongoose.Schema({   
         text: { type: String, default: '' },                        
     },
     { 
@@ -8,4 +8,4 @@ const ThueGame_Schema = new mongoose.Schema({
     }
 );
 
-module.exports = mongoose.model("ThueGame", ThueGame_Schema);
+module.exports = mongoose.model("ThueDo", ThueDo_Schema);

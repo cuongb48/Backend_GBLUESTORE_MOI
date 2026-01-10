@@ -1,13 +1,13 @@
 const LienHe = require("../../model/LienHe");
-const ThueGame = require("../../model/ThueGame");
+const ThueDo = require("../../model/ThueDo");
 
 
 module.exports = {
 
-    getOneThueGame: async (req, res) => {
+    getOneThueDo: async (req, res) => {
         try {
-            const thueGame = await ThueGame.findOne({});
-            res.status(200).json({data: thueGame});
+            const thueDo = await ThueDo.findOne({});
+            res.status(200).json({data: thueDo});
         } catch (error) {
             res.json({ message: error });
         }
@@ -15,21 +15,21 @@ module.exports = {
 
     getOneLienHe: async (req, res) => {
         try {
-            const thueGame = await LienHe.findOne({});
-            res.status(200).json({data: thueGame});
+            const thueDo = await LienHe.findOne({});
+            res.status(200).json({data: thueDo});
         } catch (error) {
             res.json({ message: error });
         }
     },
 
-    updateThueGame: async (req, res) => {
+    updateThueDo: async (req, res) => {
         try {
             const { _id, text } = req.body;
-            const updateThueGame = await ThueGame.updateOne({ _id: _id }, { text: text });
-            if (updateThueGame) {
-                res.status(200).json({ message: "Update ThueGame thành công", data: updateThueGame });
+            const updateThueDo = await ThueDo.updateOne({ _id: _id }, { text: text });
+            if (updateThueDo) {
+                res.status(200).json({ message: "Update ThueDo thành công", data: updateThueDo });
             } else {
-                res.status(404).json({ message: "Update ThueGame thất bại" });
+                res.status(404).json({ message: "Update ThueDo thất bại" });
             }
         } catch (error) {
             res.json({ message: error });
@@ -49,12 +49,12 @@ module.exports = {
         }
     },
 
-    createThueGame: async (req, res) => {
+    createThueDo: async (req, res) => {
         try {
             const { text } = req.body;
-            const newThueGame = new ThueGame({ text });
-            await newThueGame.save();
-            res.status(200).json({ message: "Thêm ThueGame thành công", data: newThueGame });
+            const newThueDo = new ThueDo({ text });
+            await newThueDo.save();
+            res.status(200).json({ message: "Thêm ThueDo thành công", data: newThueDo });
         } catch (error) {
             res.json({ message: error });
         }

@@ -6,8 +6,8 @@ const defaultRoleId = new mongoose.Types.ObjectId("67291039d9b0db6a6b5ca833");
 const AccAdmin_Schema = new mongoose.Schema({   
         email: { type: String,  required: true },
         password: { type: String, required: true },
-        firstName: { type: String, default: "Tú" },        
-        lastName: { type: String, default: "Khắc"  },        
+        firstName: { type: String, default: "Cường" },        
+        lastName: { type: String, default: "Bùi"  },        
         address: { type: String, default: "Hà Nội" },        
         phone: { type: String },        
         gender: { type: Boolean, default: true},        

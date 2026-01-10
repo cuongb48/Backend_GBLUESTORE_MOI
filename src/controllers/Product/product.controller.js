@@ -585,7 +585,7 @@ module.exports = {
             // Kiểm tra số lượng sản phẩm trong size đã chọn
             if (selectedProductSize.quantity < quantity) {
                 return res.status(400).json({
-                    message: `Sản phẩm: ${product.TenSP} - Cấu hình: ${selectedSize} ⚠ không đủ số lượng trong kho. Sản phẩm này còn ${selectedProductSize.quantity} sản phẩm. Bạn không thể thêm sản phẩm này vào giỏ hàng!`, status: 400,                   
+                    message: `Sản phẩm: ${product.TenSP} - Kích thước: ${selectedSize} ⚠ không đủ số lượng trong kho. Sản phẩm này còn ${selectedProductSize.quantity} sản phẩm. Bạn không thể thêm sản phẩm này vào giỏ hàng!`, status: 400,                   
                 });
             }
 

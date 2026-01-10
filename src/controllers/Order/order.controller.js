@@ -72,7 +72,7 @@ const createOrder1 = async (req, res) => {
         const sendOrderConfirmationEmail1 = async (toEmail) => {
             // Tạo nội dung email với bảng sản phẩm
             const mailOptions = {
-                from: 'Khắc Tú',
+                from: 'Bùi Cường',
                 to: toEmail,
                 subject: 'Xác nhận đơn hàng của bạn.',
                 html: `
@@ -86,7 +86,7 @@ const createOrder1 = async (req, res) => {
                                 <thead>
                                     <tr>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Tên sản phẩm</th>
-                                        <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Cấu hình</th>
+                                        <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Kích thước</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Số lượng</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Đơn giá</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Tổng tiền</th>
@@ -109,7 +109,7 @@ const createOrder1 = async (req, res) => {
                             <p><strong>Địa chỉ nhận hàng:</strong> <span style="color: #34495e; font-style: italic;">${address}</span></p>
                             <br/>
                                                                                    
-                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://shopbandodientu.dokhactu.site" style="color: #3498db; text-decoration: none;">WebShop Khắc Tú</a></p>
+                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://trang-chu-gbluestore.vercel.app/" style="color: #3498db; text-decoration: none;">WebShop GBlueStore</a></p>
                         </div>
                     `
             };
@@ -128,7 +128,7 @@ const createOrder1 = async (req, res) => {
         const sendOrderConfirmationEmail = async (toEmail) => {
             // Tạo nội dung email với bảng sản phẩm
             const mailOptions = {
-                from: 'Khắc Tú',
+                from: 'Bùi Cường',
                 to: toEmail,
                 subject: '🎉 Xác nhận đơn hàng của bạn! 🎉',
                 html: `
@@ -142,7 +142,7 @@ const createOrder1 = async (req, res) => {
                             <thead>
                                 <tr>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">📦 Tên sản phẩm</th>
-                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">⚙️ Cấu hình</th>
+                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">⚙️ Kích thước</th>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">🔢 Số lượng</th>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">💰 Đơn giá</th>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">🧾 Tổng tiền</th>
@@ -165,8 +165,8 @@ const createOrder1 = async (req, res) => {
                         <p><strong>🏠 Địa chỉ nhận hàng:</strong> <span style="color: #34495e; font-style: italic;">${address}</span></p>
                         <br/>
                                                                
-                        <p style="text-align: center; font-size: 16px;">📦 Bạn có thể theo dõi đơn hàng tại <a href="https://shopbandodientu.dokhactu.site" style="color: #3498db; text-decoration: none; font-weight: bold;">WebShop Khắc Tú</a></p>
-                    </div>
+                        <p style="text-align: center; font-size: 16px;">📦 Bạn có thể theo dõi đơn hàng tại <a href="https://trang-chu-gbluestore.vercel.app/" style="color: #3498db; text-decoration: none; font-weight: bold;">GBlueStore</a></p>
+                    </div><
                 `
             };
         
@@ -206,7 +206,7 @@ const createOrder1 = async (req, res) => {
                             <thead>
                                 <tr>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Sản phẩm</th>
-                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Cấu hình</th>
+                                    <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Kích thước</th>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Số lượng</th>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Đơn giá</th>
                                     <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Tổng</th>
@@ -225,7 +225,7 @@ const createOrder1 = async (req, res) => {
                             <p><strong>💳 Số tiền cần thanh toán:</strong> <span style="color: #e74c3c;">${formatCurrency(soTienCanThanhToan)}</span></p>
                         </div>
         
-                        <p style="text-align: center; font-size: 16px;">Admin có thể quản lý đơn hàng tại <a href="https://shopbandodientu.dokhactu.site/admin" style="color: #3498db; text-decoration: none;">Trang Quản Lý</a></p>
+                        <p style="text-align: center; font-size: 16px;">Admin có thể quản lý đơn hàng tại <a href="https://trang-admin-gbluestore.vercel.app/admin" style="color: #3498db; text-decoration: none;">Trang Quản Lý</a></p>
                     </div>
                 `
             };
@@ -287,7 +287,7 @@ const createOrder1 = async (req, res) => {
         await sendOrderConfirmationEmail(email);  
         
         // Gửi email thông báo đơn hàng mới đến Admin
-        const emailAdmin = 'dokhactu1822@gmail.com'
+        const emailAdmin = 'hungcuongb48@gmail.com'
         await sendOrderNotificationToAdmin(emailAdmin)
 
         // Cập nhật số lượng tồn kho và số lượng bán cho từng sản phẩm
@@ -392,7 +392,7 @@ const createOrder = async (req, res) => {
         });
 
         const mailOptions = {
-            from: '"WebShop Khắc Tú" <noreply@dokhactu.site>',
+            from: '"GBlueStore Shop" <noreply@buihungcuong.site>',
             to: email,
             subject: 'Xác nhận đơn hàng thành công',
             html: `<div style="font-family:Arial; max-width:600px; margin:auto; border:1px solid #eee; padding:20px;">
@@ -400,7 +400,7 @@ const createOrder = async (req, res) => {
                 <p>Chào <b>${lastName} ${firstName}</b>, đơn hàng của bạn đã được tiếp nhận.</p>
                 <table style="width:100%; border-collapse:collapse; margin:20px 0;">
                     <thead style="background:#f9f9f9;">
-                        <tr><th style="padding:8px; border:1px solid #ddd;">Sản phẩm</th><th style="padding:8px; border:1px solid #ddd;">Cấu hình</th><th style="padding:8px; border:1px solid #ddd;">SL</th><th style="padding:8px; border:1px solid #ddd;">Giá</th></tr>
+                        <tr><th style="padding:8px; border:1px solid #ddd;">Sản phẩm</th><th style="padding:8px; border:1px solid #ddd;">Kích thước</th><th style="padding:8px; border:1px solid #ddd;">SL</th><th style="padding:8px; border:1px solid #ddd;">Giá</th></tr>
                     </thead>
                     <tbody>${productsHtml}</tbody>
                 </table>
@@ -512,7 +512,7 @@ const createOrderThanhToanVNPay = async (req, res) => {
         const sendOrderConfirmationEmail = async (toEmail) => {
             // Tạo nội dung email với bảng sản phẩm
             const mailOptions = {
-                from: 'Khắc Tú',
+                from: 'Bùi Cường',
                 to: toEmail,
                 subject: 'Xác nhận đơn hàng của bạn.',
                 html: `
@@ -526,7 +526,7 @@ const createOrderThanhToanVNPay = async (req, res) => {
                                 <thead>
                                     <tr>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Tên sản phẩm</th>
-                                        <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Cấu hình</th>
+                                        <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Kích thước</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Số lượng</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Đơn giá</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Tổng tiền</th>
@@ -549,7 +549,7 @@ const createOrderThanhToanVNPay = async (req, res) => {
                             <p><strong>Địa chỉ nhận hàng:</strong> <span style="color: #34495e; font-style: italic;">${address}</span></p>
                             <br/>
                                                                                    
-                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://shopbandodientu.dokhactu.site" style="color: #3498db; text-decoration: none;">WebShop Khắc Tú</a></p>
+                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://trang-chu-gbluestore.vercel.app/" style="color: #3498db; text-decoration: none;">GblueStore</a></p>
                         </div>
                     `
             };
@@ -610,7 +610,7 @@ const createOrderThanhToanVNPay = async (req, res) => {
         await sendOrderConfirmationEmail(email);
 
         // Lấy returnUrl từ frontend gửi lên, nếu không có thì sử dụng mặc định
-        // const returnUrl = req.body?.returnUrl || 'https://backend-bandodientu-node.dokhactu.site/api/order/vnpay_return';
+
         const returnUrl = req.body?.returnUrl || 'http://localhost:8088/api/order/vnpay_return';
         console.log("newOrder._id.toString(): ", newOrder._id.toString());
         

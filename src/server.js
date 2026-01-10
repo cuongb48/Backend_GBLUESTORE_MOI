@@ -13,7 +13,7 @@ const commentRouter = require('./routes/commentRouter');
 const hopQuaRouter = require('./routes/hopQuaRouter');
 const cauHoiRouter = require('./routes/cauHoiRouter');
 const cartRouter = require('./routes/cartRouter');
-const thuegamelienhe = require('./routes/thuegamelienhe');
+const thuedolienhe = require('./routes/thuedolienhe');
 const aiRoutes = require('./routes/aiRoutes');
 const connectDB = require('./config/connectDB');
 const cors = require('cors');
@@ -77,7 +77,7 @@ const routes = [
     { path: '/api/cauhoi', router: cauHoiRouter },
     { path: '/api/cart', router: cartRouter },
     { path: '/api/ai', router: aiRoutes },
-    // { path: '/api/lienhethuegame', router: thuegamelienhe },
+    // { path: '/api/lienhethuedo', router: thuedolienhe },
 ];
   
 routes.forEach(route => app.use(route.path, route.router));

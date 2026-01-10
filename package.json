@@ -1,8 +1,8 @@
 {
-  "name": "dokhactu",
+  "name": "buihungcuong",
   "version": "1.0.0",
   "main": "server.js",
-  "description": "backend nodejs dokhactu",
+  "description": "backend nodejs buihungcuong",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec ./node_modules/.bin/babel-node src/server.js",

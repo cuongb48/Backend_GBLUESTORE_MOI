@@ -292,7 +292,7 @@ module.exports = {
             const sendOrderConfirmationEmail = async (toEmail) => {
                 // Tạo nội dung email với bảng sản phẩm
                 const mailOptions = {
-                    from: 'Khắc Tú',
+                    from: 'Bùi Cường',
                     to: toEmail,
                     subject: 'Thông báo về trạng thái đơn hàng của bạn.',
                     html: `
@@ -306,7 +306,7 @@ module.exports = {
                                 <thead>
                                     <tr>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Tên sản phẩm</th>
-                                        <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Cấu hình</th>
+                                        <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Kích thước</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Số lượng</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Đơn giá</th>
                                         <th style="text-align: left; padding: 8px; background-color: #ecf0f1; color: #2c3e50;">Tổng tiền</th>
@@ -332,7 +332,7 @@ module.exports = {
                             <p><strong>Trạng thái đơn hàng:</strong> <span style="color: ${orderStatusStyle}; font-style: italic; font-weight: bold;">${TinhTrangDonHang}</span></p>
                             <p><strong>Trạng thái thanh toán:</strong> <span style="color: ${paymentStatusStyle}; font-style: italic; font-weight: bold;">${TinhTrangThanhToan}</span></p>
                                 
-                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://shopbandodientu.dokhactu.site" style="color: #3498db; text-decoration: none;">WebShop Khắc Tú</a></p>
+                            <p style="text-align: center; font-size: 16px;">Bạn có thể theo dõi đơn hàng tại <a href="https://trang-chu-gbluestore.vercel.app/" style="color: #3498db; text-decoration: none;">GBlueStore</a></p>
                         </div>
                     `
                 };

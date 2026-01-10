@@ -140,7 +140,7 @@ module.exports = {
     
             // Gửi OTP qua email
             const mailOptions = {
-                from: 'Khắc Tú',  // Đổi thành tên người gửi nếu cần
+                from: 'Bùi Cường',  // Đổi thành tên người gửi nếu cần
                 to: email,  // Gửi tới email người dùng đăng ký
                 subject: 'Mã OTP Đăng ký tài khoản',
                 text: `Mã OTP của bạn là: ${otp}. Mã này có hiệu lực trong 5 phút.`,
