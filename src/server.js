@@ -94,30 +94,30 @@ app.use("/api/upload", uploadRouter); // Đặt đường dẫn cho upload
 
 
 // xóa các voucher đã hết  -- sau 10s chạy 1 lần
-cron.schedule('*/10 * * * * *', async () => {
-    try {
-        const now = moment(); // Lấy thời gian hiện tại
-        const expiredVouchers = await Voucher.find({
-            thoiGianHetHan: { 
-                $lt: now.format('DD-MM-YYYY') // So sánh với ngày hiện tại
-            }
-        });
+// cron.schedule('*/10 * * * * *', async () => {
+//     try {
+//         const now = moment(); // Lấy thời gian hiện tại
+//         const expiredVouchers = await Voucher.find({
+//             thoiGianHetHan: { 
+//                 $lt: now.format('DD-MM-YYYY') // So sánh với ngày hiện tại
+//             }
+//         });
 
-        if (expiredVouchers.length > 0) {
-            console.log(`Có ${expiredVouchers.length} phiếu giảm giá đã hết hạn. Đang xóa...`);
-            await Voucher.deleteMany({
-                thoiGianHetHan: { 
-                    $lt: now.format('DD-MM-YYYY') 
-                }
-            });
-            console.log("Phiếu giảm giá hết hạn đã được xóa thành công.");
-        } else {
-            console.log("Không tìm thấy Phiếu giảm giá nào hết hạn.");
-        }
-    } catch (error) {
-        console.error("Lỗi khi xóa phiếu giảm giá đã hết hạn:", error);
-    }
-});
+//         if (expiredVouchers.length > 0) {
+//             console.log(`Có ${expiredVouchers.length} phiếu giảm giá đã hết hạn. Đang xóa...`);
+//             await Voucher.deleteMany({
+//                 thoiGianHetHan: { 
+//                     $lt: now.format('DD-MM-YYYY') 
+//                 }
+//             });
+//             console.log("Phiếu giảm giá hết hạn đã được xóa thành công.");
+//         } else {
+//             console.log("Không tìm thấy Phiếu giảm giá nào hết hạn.");
+//         }
+//     } catch (error) {
+//         console.error("Lỗi khi xóa phiếu giảm giá đã hết hạn:", error);
+//     }
+// });
 
 setInterval(cleanUploads, 1 * 60 * 1000);
 
